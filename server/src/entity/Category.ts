@@ -8,7 +8,6 @@ import {
   DeleteDateColumn,
 } from "typeorm";
 import { Length, isNotEmpty, IsNotEmpty, Min } from "class-validator";
-import * as bcrypt from "bcryptjs";
 
 @Entity()
 @Unique(["category_name"])
