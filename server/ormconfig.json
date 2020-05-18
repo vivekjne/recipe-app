@@ -4,9 +4,16 @@
   "port": 3306,
   "username": "root",
   "password": "password",
-  "database": "test_express",
+  "database": "recipe_diy",
   "synchronize": true,
   "logging": false,
+  "cache": {
+    "type": "redis",
+    "options": {
+      "host": "localhost",
+      "port": 6379
+    }
+  },
   "entities": ["src/entity/**/*.ts"],
   "migrations": ["src/migration/**/*.ts"],
   "subscribers": ["src/subscriber/**/*.ts"],
