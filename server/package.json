@@ -13,6 +13,8 @@
     "@types/cors": "^2.8.6",
     "@types/helmet": "0.0.47",
     "@types/jsonwebtoken": "^8.5.0",
+    "@types/swagger-ui-express": "^4.1.2",
+    "@types/yamljs": "^0.2.31",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.1",
     "bull": "^3.14.0",
@@ -25,8 +27,10 @@
     "redis": "^3.0.2",
     "reflect-metadata": "^0.1.10",
     "socket.io": "^2.3.0",
+    "swagger-ui-express": "^4.1.4",
     "ts-node-dev": "^1.0.0-pre.44",
-    "typeorm": "0.2.24"
+    "typeorm": "0.2.24",
+    "yamljs": "^0.3.0"
   },
   "scripts": {
     "tsc": "tsc",

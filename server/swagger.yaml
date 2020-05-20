@@ -1,0 +1,52 @@
+definitions:
+  Category:
+    type: "object"
+    required:
+      - "category_name"
+      - "description"
+    properties:
+      id:
+        type: "integer"
+      category_name:
+        type: "string"
+        example: "Farming"
+      category_image:
+        type: string
+        example: ""
+      description:
+        type: string
+        example: "Farming is something that is done from ancient times."
+
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "RECIPE APP API DOCUMENTATION"
+host: "localhost:3000"
+basePath: "/api"
+tags:
+  - name: "category"
+    description: "Apis for category CRUD operations"
+
+schemes:
+  - "http"
+paths:
+  /category:
+    post:
+      tags:
+        - "category"
+      summary: "Add a new category"
+      description: ""
+      operationId: "addCategory"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          required: true
+          schema:
+            $ref: "#/definitions/Category"
+      responses:
+        "405":
+          description: "Invalid input"

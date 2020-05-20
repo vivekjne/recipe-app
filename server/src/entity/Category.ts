@@ -24,7 +24,7 @@ export class Category {
 
   @Column({ type: "text" })
   @IsNotEmpty()
-  @Min(10)
+  @Length(10)
   description: string;
 
   @Column()

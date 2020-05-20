@@ -7,6 +7,10 @@ import * as cors from "cors";
 import { Request, Response } from "express";
 import routes from "./routes";
 import { User } from "./entity/User";
+import * as swaggerUi from "swagger-ui-express";
+import * as YAML from "yamljs";
+
+const swaggerDocument = YAML.load("./swagger.yaml");
 
 createConnection()
   .then(async (connection) => {
@@ -16,7 +20,9 @@ createConnection()
     app.use(helmet());
     app.use(bodyParser.json());
 
-    app.use("/", routes);
+    app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+    app.use("/api", routes);
 
     // setup express app here
     // ...
